@@ -1,8 +1,9 @@
-# React + Vite
+# Food Recipe Retriver
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/SriGanesh737/food-recipe-retrieval-frontend-/assets/105561173/0431f183-52f0-4dae-a4c9-86daaa32e03a)
 
-Currently, two official plugins are available:
+![image](https://github.com/SriGanesh737/food-recipe-retrieval-frontend-/assets/105561173/b84c016a-bcda-4495-8897-8014aa8a9cca)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/SriGanesh737/food-recipe-retrieval-frontend-/assets/105561173/871c659e-e5aa-46c7-978b-f67b0e3b3276)
+
+![image](https://github.com/SriGanesh737/food-recipe-retrieval-frontend-/assets/105561173/45ce94c9-fe1e-441a-b85c-7d151d719ece)
