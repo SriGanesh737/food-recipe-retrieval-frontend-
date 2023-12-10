@@ -28,6 +28,9 @@ export default function RecipePage() {
 
 
   const parseString = (responseString) => {
+
+    console.log(responseString)
+
     // Extract the substring containing the array elements
     const startIndex = responseString.indexOf('("') + 2;
     const endIndex = responseString.lastIndexOf('")');
@@ -38,6 +41,15 @@ export default function RecipePage() {
       .replace(/\\"/g, '"') // Replace escaped double quotes with regular double quotes
       .split('", "');
 
+    if(Object.values(arrayElements).length == 1 ){
+      // remove double quotes from string
+      responseString = responseString.replace(/"/g, "")
+      // split the string at fullstops
+      responseString = responseString.split(".")
+      // filter out empty strings
+      responseString = responseString.filter((element) => element !== "")
+      return responseString
+    } 
     console.log(Object.values(arrayElements))
     return Object.values(arrayElements)
     
@@ -99,7 +111,7 @@ export default function RecipePage() {
             ))}
           </ol>
         </div>
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <a
             href={`https://www.food.com/recipe-${id}`}
             target="_blank"
@@ -108,7 +120,7 @@ export default function RecipePage() {
           >
             View Full Recipe on Food.com
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
