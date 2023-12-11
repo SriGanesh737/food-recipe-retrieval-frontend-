@@ -21,6 +21,32 @@ export default function App() {
       console.error('Error during search:', error);
     }
   };
+  const submit_relevance_backend=()=>{
+    let new_relevant_ids=[]
+     let new_irrelevant_ids=[]
+    feedbackArray.map((feedback,i)=>{
+      if(feedback=="like")
+      {
+           new_relevant_ids.push(searchResults[i].document_id)
+      }
+      else
+      {
+        new_irrelevant_ids.push(searchResults[i].document_id)
+      }}
+    )
+    console.log(new_relevant_ids)
+      console.log(new_irrelevant_ids)
+      axios.post("http://localhost:5000/update_relevance",{"new_relevant_ids":new_relevant_ids,"new_irrelevant_ids":new_irrelevant_ids}).then((res)=>{
+        return res.data
+      }).then((data)=>{
+        if(data.success)
+        {
+          console.log("updated successfully")
+        }
+      })
+
+    
+  }
 
 
   const recipeClickHandler = (id)=>{
@@ -29,6 +55,7 @@ export default function App() {
 
   const handleFeedbackSubmit = () => {
     console.log("Feedback Values Submitted:", feedbackArray);
+    submit_relevance_backend()
     navigate('/pr-curve'); // Navigate to the new page
   };
 

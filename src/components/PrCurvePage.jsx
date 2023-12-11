@@ -36,7 +36,7 @@ const PrCurvePage = () => {
       precision: precisionValues,
       recall: recallValues,
     });
-  }, [feedbackArray,precisionRecallData]);
+  }, [feedbackArray]);
 
   // Calculate interpolated points for an 11-point curve
   const interpolatedPoints = [];

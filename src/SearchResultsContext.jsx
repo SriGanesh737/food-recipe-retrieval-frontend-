@@ -21,7 +21,8 @@ export const SearchResultsProvider = ({ children }) => {
   };
 
   const setFeedbackValue = (index, value) => {
-    setFeedbackArray((prevFeedbackArray) => {
+    setFeedbackArray((prevFeedbackArray) => 
+    {
       const newArray = [...prevFeedbackArray];
       newArray[index] = value;
       return newArray;
